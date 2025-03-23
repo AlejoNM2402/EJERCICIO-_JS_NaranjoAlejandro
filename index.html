@@ -13,8 +13,13 @@ let equilibrioP = expresion.includes("(");
 let equilibrioL = expresion.includes("[");
 let equilibrioC = expresion.includes("{");
 
-if(equilibrioP == true && equilibrioL == true && equilibrioC == true){
-    if (expresion.includes(")", "}", "]")){
+let equilibrioPclose = expresion.includes(")");
+let equilibrioLclose = expresion.includes("]");
+let equilibrioCclose = expresion.includes("}");
+
+function Equilibrio() {
+    if(equilibrioP == true && equilibrioL == true && equilibrioC == true){
+    if (equilibrioPclose == true && equilibrioLclose == true && equilibrioCclose == true){
         alert("La expresion esta equilibrada");
     }
     else{
@@ -22,59 +27,73 @@ if(equilibrioP == true && equilibrioL == true && equilibrioC == true){
     }
 }
 
-if (equilibrioP == true && equilibrioL == true && equilibrioC == false){
-    if (expresion.includes(")", "]")){
-        alert("La expresion esta quilibrada")
+if(equilibrioP == true && equilibrioL == true && equilibrioC == false){
+    if (equilibrioPclose == true && equilibrioLclose == true && equilibrioCclose == false){
+        alert("La expresion esta equilibrada");
     }
     else{
-        alert("La expresion no esta equilibrada")
+        alert("La expresion no esta quilibrada")
     }
 }
 
-if (equilibrioP == true && equilibrioL == false && equilibrioC == true){
-    if (expresion.includes(")", "}")){
-        alert("La expresion esta quilibrada")
+if(equilibrioP == true && equilibrioL == false && equilibrioC == true){
+    if (equilibrioPclose == true && equilibrioLclose == false && equilibrioCclose == true){
+        alert("La expresion esta equilibrada");
     }
     else{
-        alert("La expresion no esta equilibrada")
+        alert("La expresion no esta quilibrada")
     }
 }
 
-if (equilibrioP == false && equilibrioL == true && equilibrioC == true){
-    if (expresion.includes("}", "]")){
-        alert("La expresion esta quilibrada")
+if(equilibrioP == true && equilibrioL == false && equilibrioC == false){
+    if (equilibrioPclose == true && equilibrioLclose == false && equilibrioCclose == false){
+        alert("La expresion esta equilibrada");
     }
     else{
-        alert("La expresion no esta equilibrada")
+        alert("La expresion no esta quilibrada")
     }
 }
 
-if (equilibrioP == true && equilibrioL == false && equilibrioC == false){
-    if (expresion.includes(")")){
-        alert("La expresion esta quilibrada")
+if(equilibrioP == false && equilibrioL == true && equilibrioC == true){
+    if (equilibrioPclose == false && equilibrioLclose == true && equilibrioCclose == true){
+        alert("La expresion esta equilibrada");
     }
     else{
-        alert("La expresion no esta equilibrada")
+        alert("La expresion no esta quilibrada")
     }
 }
 
-if (equilibrioP == false && equilibrioL == true && equilibrioC == false){
-    if (expresion.includes("]")){
-        alert("La expresion esta quilibrada")
+if(equilibrioP == false && equilibrioL == true && equilibrioC == false){
+    if (equilibrioPclose == false && equilibrioLclose == true && equilibrioCclose == false){
+        alert("La expresion esta equilibrada");
     }
     else{
-        alert("La expresion no esta equilibrada")
+        alert("La expresion no esta quilibrada")
     }
 }
 
-if (equilibrioP == false && equilibrioL == false && equilibrioC == true){
-    if (expresion.includes("}")){
-        alert("La expresion esta quilibrada")
+if(equilibrioP == false && equilibrioL == false && equilibrioC == true){
+    if (equilibrioPclose == false && equilibrioLclose == false && equilibrioCclose == true){
+        alert("La expresion esta equilibrada");
     }
     else{
-        alert("La expresion no esta equilibrada")
+        alert("La expresion no esta quilibrada")
     }
 }
+
+if(equilibrioP == false && equilibrioL == false && equilibrioC == false){
+    if (equilibrioPclose == false && equilibrioLclose == false && equilibrioCclose == false){
+        alert("La expresion esta equilibrada");
+    }
+    else{
+        alert("La expresion no esta quilibrada")
+    }
+}
+
+    
+}
+
+Equilibrio();
 
     </script>
 </body>
